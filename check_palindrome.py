@@ -6,8 +6,8 @@ def check_palindrome(text):
 
 
 try:
-    file = input("Enter filepath for palindrome check: ")
-    text = open(file, "r").read()
+    filepath = input("Enter filepath for palindrome check: ")
+    text = open(filepath, "r").read()
     check_palindrome(text)
-except:
-    print(f"Unable to process file at {path}")
+except OSError:
+    print(f"Unable to process file at {filepath}")
